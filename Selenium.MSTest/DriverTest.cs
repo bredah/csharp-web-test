@@ -1,34 +1,27 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 
-namespace Selenium.MSTest
-{
+namespace Selenium.MSTest {
     [TestClass]
-    public class DriverTest
-    {
+    public class DriverTest {
         private IWebDriver _driver;
 
-
         [TestInitialize]
-        public void SetUp()
-        {
+        public void SetUp () {
             _driver = null;
         }
 
         [TestCleanup]
-        public void TearDown()
-        {
-            if (_driver != null)
-            {
-                _driver.Close();
+        public void TearDown () {
+            if (_driver != null) {
+                _driver.Quit ();
             }
         }
 
         [TestMethod]
-        public void Local()
-        {
-            _driver = new Driver().Start(Browser.Chrome);
-            Assert.AreEqual(1, _driver.CurrentWindowHandle.Length);
+        public void Local () {
+            _driver = new Driver ().Start (Browser.Chrome);
+            Assert.IsTrue (_driver.WindowHandles.Count > 0);
         }
     }
 }

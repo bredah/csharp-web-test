@@ -1,8 +1,5 @@
-﻿using System;
-namespace Selenium
-{
-    public enum Browser
-    {
+namespace Selenium {
+    public enum Browser {
         Chrome,
         Edge,
         Firefox,
