@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Selenium.Pages\Selenium.Pages.csproj" />
     <ProjectReference Include="..\Selenium\Selenium.csproj" />
   </ItemGroup>
 </Project>

@@ -60,5 +60,10 @@ namespace Selenium {
             driver.Manage ().Timeouts ().PageLoad = TimeSpan.FromSeconds (15);
             driver.Manage ().Timeouts ().ImplicitWait = TimeSpan.FromSeconds (10);
         }
+
+        public static IWebElement FindElement(By by)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
